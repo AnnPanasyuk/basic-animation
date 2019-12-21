@@ -46,19 +46,33 @@ html, body {
   top: -40px;
   left: 0;
   animation-name: drive;
-  animation-duration: 5s;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(.64,.01,.57,.56);
 }
 
+.luigi {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  animation-name: drive;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  transform: rotateX(180deg);
+}
 
 /*// KEYFRAMES //*/
 
 
 @keyframes drive {
   from {
-    transform: translateX(0);
+    transform: translateX(-100px);
   }
   to {
-    transform: translateX(500px);
+    transform: translateX(850px);
   }
 }
 
